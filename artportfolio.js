@@ -1,12 +1,10 @@
 Router.configure({
-  layoutTemplate: 'layout',
-  yieldTemplate: {
-    header: {to: 'header'},
-    footer: {to: 'footer'}
-  }
+  layoutTemplate: 'layout'
 });
 
-
-Router.map(function() {
-  this.route('home', {path: '/'});
+Router.route('/', function() {
+	this.render('home');
+});
+Router.route('/:artname', function() {
+	this.render('artpage', {data: {image: this.params.artname}});
 });

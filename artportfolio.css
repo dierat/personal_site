@@ -1,4 +1,4 @@
-img {
+.thumbnails img {
 	max-height: 500px;
 	max-width: 100%; 
 	height: auto;
@@ -32,10 +32,18 @@ h1 {
 small {
 	font-family: 'Raleway', sans-serif;
 	color: #0C7489;
-	font-size: 18px;
-	margin-bottom: 0em;
 }
 
 body {
 	background-color: #FCFFFC;
+}
+
+.header_text {
+	font-size: 20px;
+	margin-bottom: 0em;
+}
+
+.fullsize {
+	text-align: center;
+
 }
