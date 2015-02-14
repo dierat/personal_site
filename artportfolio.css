@@ -1,0 +1,34 @@
+img {
+	max-height: 500px;
+	max-width: 100%; 
+	height: auto;
+	padding: 20px;
+	max-width: 100%; 
+	height: auto;
+}
+
+footer {
+	text-align: center;
+	padding: 0px 0px 40px 0px;
+}
+
+header {
+	text-align: center;
+	padding: 10px;
+}
+
+.thumbnails {
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-family: 'Ovo', serif;
+	font-weight: lighter;
+	font-size: 50px;
+	margin-bottom: 0.25em;
+}
+
+small {
+	font-family: 'Raleway', sans-serif;
+}
