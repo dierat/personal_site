@@ -1,13 +1,17 @@
 <template name="home">
 
-	<p>
-	<div class="thumbnails">
-		<a href="nine_of_swords"><img src="nine_of_swords.png" alt="Nine of Swords"/></a>
-		<a href="dragoness"><img src="dragoness.png" alt="Dragoness"/></a>
-		<a href="mobster_bach"><img src="mobster_bach.png" alt="Mobster Bach"/></a> 
-		<a href="the_lutenist"><img src="the_lutenist.png" alt="The Lutenist"/></a>
-		<a href="sky_and_sea"><img src="sky_and_sea.png" alt="Sky and Sea"/></a>
-	</div>
-	</p>
+	<p><div class="thumbnails">
 
+	{{#each thumbs}}
+		{{> thumb}}
+	{{/each}}
+
+	</div></p>
+
+</template>
+
+
+
+<template name="thumb">
+	<a href="{{file_name}}"><img src="{{file_name}}.png" alt="{{title}}"/></a>
 </template>
