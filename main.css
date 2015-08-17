@@ -26,6 +26,16 @@ h1 {
 	color: #13505B;
 }
 
+h1 a {
+	text-decoration: none;
+	color: #13505B;
+}
+
+h2 a {
+	text-decoration: none;
+	color: #13505B;
+}
+
 small {
 	font-family: 'Raleway', sans-serif;
 	color: #0C7489;
@@ -33,7 +43,6 @@ small {
 
 body {
 	background-color: #FCFFFC;
-	padding: 20px;
 }
 
 .header_text {
@@ -43,5 +52,19 @@ body {
 
 .fullsize {
 	text-align: center;
+}
 
+.post {
+	width: 75%;
+	text-align: justify;
+	margin: 50px auto;
+	color: #13505B;
+}
+
+.postHeadline {
+	display: flex;
+}
+
+.date {
+	margin: 23.5px 0 0 14px;
 }

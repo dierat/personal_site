@@ -10,6 +10,10 @@ Router.route('/art');
 
 Router.route('/blog');
 
-Router.route('/:artname', function() {
+Router.route('/blog/:_id', function(){
+  this.render('blogpage', {data: Posts.findOne({_id: this.params._id})});
+});
+
+Router.route('/art/:artname', function() {
   this.render('artpage', {data: {image: this.params.artname}});
 });

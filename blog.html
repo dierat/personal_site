@@ -7,9 +7,19 @@
 
 
 <template name="post">
-    <p>{{title}} {{createdFromNow}}</p>
+  <div class="post">
+    <p class="postHeadline"><h2><a href=/blog/{{_id}}>{{title}}</a></h2> <small class="date">{{createdFromNow}}</small></p>
     <p>{{content}}</p>
-    <p>
-      {{tags}}
-    </p>
+    <p><small>{{tags}}</small></p>
+  </div>
+</template>
+
+
+
+<template name="blogpage">
+  <div class="post">
+    <p class="postHeadline"><h2><a href=/blog/{{_id}}>{{title}}</a></h2> <small class="date">{{createdFromNow}}</small></p>
+    <p>{{content}}</p>
+    <p><small>{{tags}}</small></p>
+  </div>
 </template>

@@ -1,29 +1,21 @@
 <template name="art">
-
 	<p><div class="thumbnails">
-
 	{{#each thumbs}}
 		{{> thumb}}
 	{{/each}}
-
 	</div></p>
-
 </template>
 
 
 
 <template name="thumb">
-
-	<a href="{{file_name}}"><img src="{{file_name}}.png" alt="{{title}}"/></a>
-
+	<a href="/art/{{file_name}}"><img src="{{file_name}}.png" alt="{{title}}"/></a>
 </template>
 
 
 
 <template name="artpage">
-
   <div class="fullsize">
     <a href="/art"><img src="{{image}}.png" alt=""></a>
   </div>
-  
 </template>

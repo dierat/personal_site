@@ -5,7 +5,7 @@ Tags = new Mongo.Collection('tags');
 if (Meteor.isClient){
   Template.blog.helpers({
     posts: function(){
-      return Posts.find();
+      return Posts.find({}, {sort: {createdAt: -1}});
     }
   });
   Template.post.helpers({
@@ -13,11 +13,11 @@ if (Meteor.isClient){
       return moment(this.createdAt).fromNow();
     }
   });
-  Template.tags.helpers({
-    tags: function(){
-      return Posts.find({_id: this._id}).tags;
-    }
-  });
+  // Template.tags.helpers({
+  //   tags: function(){
+  //     return Posts.find({_id: this._id}).tags;
+  //   }
+  // });
 }
 
 
@@ -27,8 +27,8 @@ if (Meteor.isServer){
       var posts = [
         {
           title: "First Post",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          tags: ["grey", "daylight", "martian"]
+          content: "I’ve heard a lot of folks discussing JavaScript and whether or not it’s suitable for a language that is universally used in web development. I have to say that although I enjoy it, I have to agree. Its versatility is useful at times but it is mostly confusing and produces unforeseen bugs. Beginners often have trouble with the nuances of ==, !,  and this, and few developers really master the language. Unfortunately, we’re kind of stuck with it.<br>We’ve come to a point where JavaScript is so ubiquitous in web development that it’s too expensive for us to pick a new language now. There are millions of projects written in this often underestimated language, so it would be far too costly to turn around now. Even upgrading JavaScript is a huge undertaking that has taken years to push through.<br>In this way, JavaScript actually reminds me of English. Both languages have become universal not because they are easiest to learn or because they are best suited for the concepts that need to be conveyed, but due to a series of events long in the past.<br>There are, of course, alternatives for both languages. Esperanto is a language that was designed specifically to be an easy-to-learn, universal language that is easily adopted by people from all over the world. (Unfortunately, it was still very Euro-centric and drew primarily upon European languages while ignoring every other human civilization, so it did not quite meet even that goal.) However, Esperanto was never adopted by more than a few thousand people. It was an artificial, designed language, and those who encountered it felt that rigidity in the language. For it to become fluid, it would have to endure the alterations that every language goes through when being spoken by real people in real situations. But after going through such an editing process, would it still be so easy to learn? Perhaps a real-world language that is easy to speak is by its very nature difficult to learn, with all the eccentricities that comes along with it.<br>But, perhaps more importantly, it would be too costly to translate all of the Western world’s documents and websites into a newer, more designed language such as Esperanto. And that is that is the problem facing JavaScript competitors as well - in order for a new alternative to become accepted, it would have to be backwards compatible and cost-effective.<br>And yet another issue is that the more languages splinter off into sub-sections, the more time is required to learn all of these different alternatives. And that time is expensive as well.",
+          tags: ["JavaScript", "programming"]
         }, {
           title: "Second Post",
           content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
