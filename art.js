@@ -2,7 +2,7 @@ Thumbs = new Mongo.Collection("thumbs");
 
 
 if (Meteor.isClient) {
-  Template.home.helpers({
+  Template.art.helpers({
     thumbs: function () {
       return Thumbs.find({}, {sort: {order: 1} });
     }

@@ -1,0 +1,15 @@
+<template name="blog">
+  {{#each posts}}
+    {{> post}}
+  {{/each}}
+</template>
+
+
+
+<template name="post">
+    <p>{{title}} {{createdAt}}</p>
+    <p>{{content}}</p>
+    <p>
+      {{tags}}
+    </p>
+</template>
