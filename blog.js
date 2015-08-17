@@ -8,6 +8,11 @@ if (Meteor.isClient){
       return Posts.find();
     }
   });
+  Template.post.helpers({
+    createdFromNow: function(){
+      return moment(this.createdAt).fromNow();
+    }
+  });
   Template.tags.helpers({
     tags: function(){
       return Posts.find({_id: this._id}).tags;
