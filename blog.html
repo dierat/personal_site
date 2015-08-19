@@ -6,20 +6,26 @@
 
 
 
+<template name="blogpage">
+  {{> post}}
+</template>
+
+
+
 <template name="post">
   <div class="post">
     <p class="postHeadline"><h2><a href=/blog/{{_id}}>{{title}}</a></h2> <small class="date">{{createdFromNow}}</small></p>
-    <p>{{content}}</p>
+    <p>
+      {{#each paragraphs}}
+        {{> paragraph}}
+      {{/each}}
+    </p>
     <p><small>{{tags}}</small></p>
   </div>
 </template>
 
 
 
-<template name="blogpage">
-  <div class="post">
-    <p class="postHeadline"><h2><a href=/blog/{{_id}}>{{title}}</a></h2> <small class="date">{{createdFromNow}}</small></p>
-    <p>{{content}}</p>
-    <p><small>{{tags}}</small></p>
-  </div>
+<template name="paragraph">
+  <p>{{this}}</p>
 </template>
