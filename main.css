@@ -65,6 +65,10 @@ body {
 	display: flex;
 }
 
+figure {
+	text-align: center;
+}
+
 .date {
 	margin: 23.5px 0 0 14px;
 }
